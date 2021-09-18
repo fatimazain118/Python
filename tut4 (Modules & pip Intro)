@@ -1,0 +1,6 @@
+//Pycharm is one of the best Integrated Development Environments (IDEs) for Python Language developed by the Czech company JetBrains.
+//Sometimes we have to use someone else's code in our program because it saves us a lot of time.we will learn a technique to use code that is not written by us but will enhance the quality of our program, save us time and energy, and of course, it is legal and free.
+//Module – Module or library is a file that contains definitions of several functions, classes, variables, etc. which is written by someone else for us to use.
+--->External Modules:
+---->Built in Module
+//Pip – Pip is a package manager for Python i.e., pip command can be used to download any external module in Python. It is something that helps us to get code written by someone else.
