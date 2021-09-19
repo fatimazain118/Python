@@ -1,0 +1,68 @@
+#The string is a data type in Python. Strings in Python programming language are arrays of bytes representing a sequence of characters. In simple terms, Strings are the combination or collection of characters enclosed in quotes. Strings are one of the most used data types in any programming language because most of the real-world data such as name, address, or any sequence which contains alphanumeric characters are mostly of type ‘String’.
+
+'''Primarily, you will find three types of strings in Python :
+
+Single Quote String – (‘Single Quote String’)
+Double Quote String – (“Double Quote String”)
+Triple Quote String – (‘’’ Triple Quote String ‘’’)
+'''
+#In Python, the term ‘string slice’ refers to a part of the string, where strings are sliced using a range of indices.
+#To do string slicing, we just need to put the name of the string followed by [n:m]. It means ‘n’ denotes the index from which slicing should start, and ‘m’ denotes the index at which slicing should terminate or complete.
+
+
+
+mystr="hello Zainab"
+print(mystr)
+print(mystr[1])
+print(mystr[0:1]) #In string slicing 0 is included but 1 excluded
+print(mystr[0:2])
+print(len(mystr))
+# print(mystr(34)) #shows error
+print(mystr[0:45]) #dont show error
+print(mystr[0:5:2]) #from 0 to 4(excluding 5) print alternatively as 2 is given so leave 1 character
+print(mystr[0::2])
+print(mystr[:2]) #bydefault it will take starting 0
+print(mystr[0:]) #by default take ending of full lenghth
+print(mystr[::]) #by default last wala bhi khali chrra to 1 aaiga
+print(mystr[-4:-2])  #From back it'll count                                                            
+print(mystr[8:10])  #Same as above in +ve no.
+print(mystr[::-1])  #Reverse the string
+print(mystr[::-2])  #Reserve and skip one character
+print(mystr.isalpha())   #is alpha is a function which check it's alpha as it contain spaces
+var = "hiiiZainab"
+print(var.isalpha())  #return true coz no no space
+print(mystr.isalnum())
+print(mystr.endswith("Zainab"))
+print(mystr.count("Z"))
+print(mystr.capitalize())
+print(mystr.find("hello"))   #from 0 index its starting
+print(mystr.upper())
+print(mystr.replace("hello", "hi"))
+
+---------------------------------------------------------------------------------------------------------------------------------
+**************************Output****************************
+
+hello Zainab
+e
+h
+he
+12
+hello Zainab
+hlo
+hloZia
+he
+hello Zainab
+hello Zainab
+in
+in
+baniaZ olleh
+bna le
+False
+True
+False
+True
+1
+Hello zainab
+0
+HELLO ZAINAB
+hi Zainab
