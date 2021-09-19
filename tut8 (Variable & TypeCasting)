@@ -1,0 +1,58 @@
+var1 = "Hello World"
+var2 = 4
+var3 = 34.9
+var4 = "Zainab"
+var5 = "54"
+var6 = "2"
+print(type (var1))             #python automatically takes the type of variable
+print(type (var2))
+print(type (var3))
+print(var2 + var3)
+#print(var1 + var2) #This will show an error
+print(var1 + var4)
+print(var5 + var6)               #Just concatenate the string not add
+print(int(var5) + int (var6))    #Typecasting string to integer
+print(10 * "Hello World\n")
+print(10 * str(var5 + var6))      #The sum of var5 and var6 is converted to sring and the sum is printed 10 times
+
+----------------------------------------------------------------------------------------------------------------------------------
+***********************Output*********************************
+
+<class 'str'>
+<class 'int'>
+<class 'float'>
+38.9
+Hello WorldZainab
+542
+56
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+
+542542542542542542542542542542
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+############Making calculator##########
+print("Enter no.1")
+n1 = input()
+print("Enter no.2")
+n2 = input()
+print("Sum of n1 and n2 is : " , int(n1) + int (n2))
+
+---------------------------------------------------------------------------------------------------------------------
+******************Output***************************
+
+Enter no.1
+2
+Enter no.2
+3
+Sum of n1 and n2 is :  5
+---------------------------------------------------------------------------------------------------------------------
+
