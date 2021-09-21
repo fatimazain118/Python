@@ -1,0 +1,63 @@
+Python programming definition of sets:
+“A set is a data structure, having unordered, unique, and unindexed elements.”
+--> Elements in a set are also called entries, and no two entries could be the same within a set.
+properties of sets in Python:
+-->Sets are iterable(iterations can be performed using loops)
+--->They are mutable (can be updated by adding or removing entries)
+--->There is no duplication (two same entries do not occur)
+
+s = set()
+print(type(s))
+s_from_list = set([1,2,3,4])
+print(s_from_list)
+print(type(s_from_list))
+________________________________________________________________________
+*************Output*************************
+
+<class 'set'>
+{1, 2, 3, 4}
+<class 'set'>
+
+_________________________________________________________________________________
+
+s = set()
+s.add(1)
+s.add(1) #set print unique datatype unlike list
+s.add(2)
+s1 = s.union({1,2,3})
+print(s, s1)  #print both set s and s1
+
+__________________________________________________________________________________________
+******************Output****************
+
+{1, 2} {1, 2, 3}
+
+_________________________________________________________________________________________
+
+s = set()
+s.add(1)
+s.add(1) #set print unique datatype unlike list
+s.add(2)
+s1 = s.intersection({1,2,3})
+print(s, s1)  #print both set s and s1
+________________________________________________________________________________________________
+**********************Output****************
+
+{1, 2} {1, 2}
+
+__________________________________________________________________________________________
+s = set([1,3,4])
+s1 ={1,2,3}
+
+print(s.isdisjoint(s1))
+print(s)
+print(type(s1))
+s.remove(3)
+print(s)
+_________________________________________________________________________________________________
+**************************Output******************
+
+False
+{1, 3, 4}
+<class 'set'>
+{1, 4}
