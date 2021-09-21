@@ -1,10 +1,23 @@
 Python programming definition of sets:
+
 “A set is a data structure, having unordered, unique, and unindexed elements.”
 --> Elements in a set are also called entries, and no two entries could be the same within a set.
-properties of sets in Python:
+
+Properties of sets in Python:
 -->Sets are iterable(iterations can be performed using loops)
 --->They are mutable (can be updated by adding or removing entries)
 --->There is no duplication (two same entries do not occur)
+
+Structure:
+-->Elements of the sets are written in between two curly brackets and are separated with a comma, and in this simple way, we can create a set in Python.
+-->The other way of forming a set is by using a built-in set constructor function.
+
+Restrictions:
+-->Once a set is created, you can not change any of its items. Although you can add new items or remove previous but updating an already existing item is not possible.
+-->There is no indexing in sets, so accessing an item in order or through a key is not possible.
+
+Set Methods:
+-->There are already a lot of built-in methods that you can use for your ease, like -->union(), discard(), add(), isdisjoint(), etc.
 
 s = set()
 print(type(s))
