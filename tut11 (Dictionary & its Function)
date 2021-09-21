@@ -69,6 +69,18 @@ print(d1.items())  #print key value pairs
 dict_keys(['Zainab', 'Fatima', 'Jerry', 'Tom', 'lena'])
 dict_items([('Zainab', 'Burger'), ('Fatima', 'Fish'), ('Jerry', 'Cheese'), ('Tom', {'A': 'Breakfast', 'b': 'Lunch', 'c': 'Dinner'}), ('lena', 'Toffee')])
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**************Dict********************
+d1 = {"accomplish" : "to suceed to do something", "Borrow" : "to take or receive something", "Neighbour" : "a person who lives near you", " Opportunity ":" A chance to do something that you would like to do"}
+Name = input("Type the name you want to search :")
+print("Meaning :" ,d1[Name])
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+*******************Output***********************
+
+Type the name you want to search :Borrow
+Meaning : to take or receive something
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 Here are a few important features of a python dictionary:
 
