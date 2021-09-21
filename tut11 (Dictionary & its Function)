@@ -1,0 +1,80 @@
+“Python dictionary is an unordered collection of items. Each item of the dictionary has a key and value pair/ key-value pair.”
+
+d1 = {"Zainab" : "Burger", "Fatima" : "Fish", "Jerry" : "Cheese" , "Tom" : {"A" : "Breakfast" , "b" : "Lunch", "c": "Dinner"}}
+print(type(d1))
+print(d1)
+print(d1["Fatima"])  #python is caseSensitive as small character small aur bde bde he print hote
+print(d1["Tom"])  #Tom dict will be printed
+print(d1["Tom"]["b"])
+d1["Ram"] = "Junk Food"
+d1["Auranzeb"] = "Kabab"  #adding to dict
+print(d1)
+del d1["Ram"]
+print(d1)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+***************************Output*************************
+
+<class 'dict'>
+{'Zainab': 'Burger', 'Fatima': 'Fish', 'Jerry': 'Cheese', 'Tom': {'A': 'Breakfast', 'b': 'Lunch', 'c': 'Dinner'}}
+Fish
+{'A': 'Breakfast', 'b': 'Lunch', 'c': 'Dinner'}
+Lunch
+{'Zainab': 'Burger', 'Fatima': 'Fish', 'Jerry': 'Cheese', 'Tom': {'A': 'Breakfast', 'b': 'Lunch', 'c': 'Dinner'}, 'Ram': 'Junk Food', 'Auranzeb': 'Kabab'}
+{'Zainab': 'Burger', 'Fatima': 'Fish', 'Jerry': 'Cheese', 'Tom': {'A': 'Breakfast', 'b': 'Lunch', 'c': 'Dinner'}, 'Auranzeb': 'Kabab'}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+******************Dict Function***************
+
+d1 = {"Zainab" : "Burger", "Fatima" : "Fish", "Jerry" : "Cheese" , "Tom" : {"A" : "Breakfast" , "b" : "Lunch", "c": "Dinner"}}
+d2 = d1   #d2 is pointer pointing now to d1, and d1 is a pointer pointing to itself
+del d2["Zainab"]  #deleting frm d2 will also delete frm d1
+print(d1)
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+************Output********************
+
+{'Fatima': 'Fish', 'Jerry': 'Cheese', 'Tom': {'A': 'Breakfast', 'b': 'Lunch', 'c': 'Dinner'}}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+d1 = {"Zainab" : "Burger", "Fatima" : "Fish", "Jerry" : "Cheese" , "Tom" : {"A" : "Breakfast" , "b" : "Lunch", "c": "Dinner"}}
+d2 = d1.copy()      #Copy function will not delete from d1
+del d2["Zainab"]
+print(d2)
+print(d1)
+print(d2.get("Jerry")
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+*****************Output************************
+
+{'Fatima': 'Fish', 'Jerry': 'Cheese', 'Tom': {'A': 'Breakfast', 'b': 'Lunch', 'c': 'Dinner'}}
+{'Zainab': 'Burger', 'Fatima': 'Fish', 'Jerry': 'Cheese', 'Tom': {'A': 'Breakfast', 'b': 'Lunch', 'c': 'Dinner'}}
+Cheese
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+d1 = {"Zainab" : "Burger", "Fatima" : "Fish", "Jerry" : "Cheese" , "Tom" : {"A" : "Breakfast" , "b" : "Lunch", "c": "Dinner"}}
+
+d1.update({"lena" : "Toffee"})
+print(d1)
+print(d1.keys())
+print(d1.items())  #print key value pairs
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+**************Output*******************************
+
+{'Zainab': 'Burger', 'Fatima': 'Fish', 'Jerry': 'Cheese', 'Tom': {'A': 'Breakfast', 'b': 'Lunch', 'c': 'Dinner'}, 'lena': 'Toffee'}
+dict_keys(['Zainab', 'Fatima', 'Jerry', 'Tom', 'lena'])
+dict_items([('Zainab', 'Burger'), ('Fatima', 'Fish'), ('Jerry', 'Cheese'), ('Tom', {'A': 'Breakfast', 'b': 'Lunch', 'c': 'Dinner'}), ('lena', 'Toffee')])
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Here are a few important features of a python dictionary:
+
+--->It is unordered (no sequence is required - data or entries have no order)
+--->It is mutable (values can be changed even after its formation, or new data/information can be added to the already existing dictionary, we can also pop/remove an entry completely)
+--->It is indexed (Dictionary contains key-value pairs, and indexing is done with keys. Also, after the Python 3.7th update, the compiler stores the entries in the order they are created)
+--->No duplication of data (each key is unique; no two keys can have the same name, so there is no chance for a data being overridden)
+--->We can store heterogeneous data into our dictionary, i.e., numbers, strings, tuples, and the other objects can be stored in the same dictionary.
+---Different data types can be used in a single list, making the value of some keys in the dictionary.
