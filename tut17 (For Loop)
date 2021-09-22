@@ -70,3 +70,17 @@ ___________________________________________________________________________
 
 34
 7
+____________________________________________________________________________
+*************While Loop*****************                        //A “for” statement loop runs until the iteration through, set, lists, tuple, etc., or a generator function is completed. In the case of a while loop, the statement simply loops until the condition we have provided becomes false.
+i=0
+while(i<5):               //colon means enter into the loop
+    print(i)
+    i=i+1                   //i++ shows error
+__________________________________________________________
+********Output*************
+
+0
+1
+2
+3
+4
