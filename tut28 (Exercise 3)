@@ -1,0 +1,31 @@
+print("This is no. guessing game")
+Number_of_guesses =1;
+while(Number_of_guesses <=9):
+   guess_Number = int(input())
+   if guess_Number<18:
+     print("Increase your no.")
+   elif guess_Number> 18:
+     print("Decrease your no.")
+   else:
+     print("You Won!!")
+     print(Number_of_guesses, "No. of guess took to finish:" )
+     break
+   Number_of_guesses = Number_of_guesses +1
+if(Number_of_guesses>9):
+          print("Game Over")
+
+__________________________________________________________________________________
+*************Output*******************
+
+This is no. guessing game
+20
+Decrease your no.
+10
+Increase your no.
+14
+Increase your no.
+16
+Increase your no.
+18
+You Won!!
+No. of guess took to finish: 5
