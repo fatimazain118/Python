@@ -1,0 +1,72 @@
+list1 = ["Harry", "Larry", "Carry", "Marie"]                  //tuple with () also printed in the same way
+for item in list1:
+    print(item)
+________________________________________________
+****Output**********
+
+Harry
+Larry
+Carry
+Marie
+________________________________________________________
+
+list1 = [["Harry", 1], ["Larry",2], ["Carry",34], ["Marie",45]]         //list of list
+for item in list1:
+    print(item)
+_______________________________________________________________________
+************Output***********
+
+['Harry', 1]
+['Larry', 2]
+['Carry', 34]
+['Marie', 45]
+______________________________________________________________________________
+
+list1 = [["Harry", 1], ["Larry",2], ["Carry",34], ["Marie",45]]
+for item, lollypop in list1:
+    print(item,"have", lollypop ,"Lollypop")
+____________________________________________________________________________________
+****************Output***************
+
+Harry have 1 Lollypop
+Larry have 2 Lollypop
+Carry have 34 Lollypop
+Marie have 45 Lollypop
+_________________________________________________________________________________________
+**************using dictionary************
+
+list1 = [["Harry", 1], ["Larry",2], ["Carry",34], ["Marie",45]]
+dict1 =dict(list1)                                    //copy itno dict
+for item, lollypop in dict1.items():                  //items() with s
+    print(item,"have", lollypop, "lollypop")
+_________________________________________________________________________
+*************Output***********************
+    
+Harry have 1 lollypop
+Larry have 2 lollypop
+Carry have 34 lollypop
+Marie have 45 lollypop
+_______________________________________________________________________
+list1 = [["Harry", 1], ["Larry",2], ["Carry",34], ["Marie",45]]
+dict1 =dict(list1)
+for item in dict1:
+    print(item)
+__________________________________________________________________________
+****************Output********************
+
+Harry
+Larry
+Carry
+Marie
+______________________________________________________________________
+
+list1 = ["Zainab", 34, 2, 7 , "Fatima", 'a']
+for item in list1:
+    if str(item).isnumeric() and item > 6:
+        print(item)
+
+___________________________________________________________________________
+******************Output**************
+
+34
+7
