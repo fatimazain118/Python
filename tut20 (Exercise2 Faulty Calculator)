@@ -1,0 +1,43 @@
+# Exercise 2 - Faulty Calculator
+# 45 * 3 = 555, 56+9 = 77, 56/6 = 4
+# Design a calculator which will correctly solve all the problems except
+# the following ones:
+# 45 * 3 = 555, 56+9 = 77, 56/6 = 4
+# Your program should take operator  and the two numbers as input from the user
+
+
+Num1 = int(input("Enter no. 1"))
+print(Num1)
+Num2 = int(input("Enter no. 2"))
+print(Num2)
+Num3 = input("Enter your operator, which you want" + " +,-,/,*")
+print(Num3)
+
+if Num1 == 45 and Num2 == 3 and Num3 =='*':
+        print("555")
+elif Num3 == '*':
+    print(Num1* Num2)
+elif Num1 ==56 and Num2 ==9 and Num3 =='+':
+    print("77")
+elif Num3 == '+':
+    print(Num1 + Num2)
+elif Num1 ==56 and Num2 ==6 and Num3 == '/':
+    print("4")
+elif Num3 == '/':
+    print(Num1 / Num2)
+else:
+    print("Unexpected input")
+    
+ ______________________________________________________________________________________________________
+ ****************Output******************************
+ 
+ Enter no. 1 2
+2
+Enter no. 2 3
+3
+Enter your operator, which you want +,-,/,*-
+-
+Unexpected input
+
+
+
