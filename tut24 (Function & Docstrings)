@@ -1,0 +1,101 @@
+/*Functions And Docstrings
+ “Functions in Python can be defined as lines of codes that are built to create a specific task and can be used again and again in a program when called.”
+
+There are two types of functions in the Python language:
+
+Built-in functions
+User-defined functions
+-->In order to create one ourselves, we have to use the def keyword in order to define a function accompanied by the function's name with a pair of parentheses.
+The function of parenthesis is to send arguments or parameters to a function.
+
+*/
+
+a = 2
+b = 4
+c = sum((a, b))  # sum function always call in list or tuple format not like sum(a,b)
+print(c)            #this was built in function
+
+def function1():
+    print("Hey you are in function 1")
+print(function1())
+_____________________________________________________________________________________________
+************Output***************
+
+6
+Hey you are in function 1
+None
+_________________________________________________________
+      
+
+def function1():   #user define function
+    print("Hey you are in function 1")
+function1()
+function1()
+function1()
+___________________________________________________________
+************Output**********
+Hey you are in function 1
+Hey you are in function 1
+Hey you are in function 1
+______________________________________________________________
+
+
+
+def function1(a,b):   #user define function
+    print("Hey you are in function 1,and sum is", a+b)
+function1(2,4)                                               #passing arguments
+
+def function2(a,b):
+    average = (a+b)/2
+    print(average)
+function2(1,1)
+_______________________________________________________________
+************Output***********
+Hey you are in function 1,and sum is 6
+1.0
+____________________________________________________________
+
+def function2(a,b):
+    average = (a+b)/2
+    print(average)
+v=function2(1,1)
+print(v)
+___________________________________________
+*****Output**********
+1.0
+None                #this none is printed coz v=function2 has return nothing, we have to provide return type to it
+___________________________________________________________________________________________________________________________
+#agr yha function1 bhi sath me run krate to koi frk nhi pdhta as uska return type kch nhi hai then sedha v=function2(1,1) pr jump kr jata
+
+def function2(a,b):
+    average = (a+b)/2
+    #print(average)          #we comment out this as 1.0 will be printed two times
+    return average
+v=function2(1,1)                #done this as when we have to put the value of function in some variable
+print(v)
+____________________________________________
+*******Output************
+
+1.0
+________________________________________________________________________________________________________________________________________________________
+Docstrings
+-Docstring is a short form of documentation string. Its purpose is to give the programmer a brief knowledge about the functionality of the function.
+-It must be the first string in a function, and it is also an optional string but always good to have it while working on programs having multiple functions. 
+-The syntax for writing a docstring is very simple as it is just a string written in between three double quotes placed three times (""" """) on either side of the string.
+-But it has to be the first line of code in the function’s body.
+-To call a docstring we write the name of the function followed by ._doc_.
+
+def function2(a,b):
+    """This is a function which calculate average of two no."""
+    average = (a+b)/2
+    #print(average)
+    return average
+# v=function2(1,1)
+# print(v)
+print(function2.__doc__)      #way to print docstrings
+_____________________________________________________________________________________________________
+***************Output******************
+
+This is a function which calculate average of two no.
+
+
