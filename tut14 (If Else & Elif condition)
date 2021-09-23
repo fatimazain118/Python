@@ -49,4 +49,27 @@ ________________________________________________________________________________
 
 False
 Yes it's in list
+___________________________________________________________________________________________________________________
+
+Short Hand If Else Notation In Python
+“An executable statement, written in so compact manner that it comprises of only a single line of code is known as shorthand statement.”
+
+If-expression if(Condition) else else-expression     //Syntax
+____________________________________________________________________________________________________
+a= int(input("Enter the value of a \n"))
+b= int(input("Enter the value of b \n"))
+
+print("A is greater than B") if(a>b) else print("B is greater than A")
+___________________________________________________________________________________________________
+****************Output*******************
+
+Enter the value of a 
+2
+Enter the value of b 
+5
+B is greater than A
+
+
+
+
 
