@@ -1,0 +1,28 @@
+“Exception can be said as an error, that causes a program to crash. Unlike syntax error, 
+it is syntactically correct and occurs mostly due to our negligence”
+
+For example, assigning a string value to an int data type variable or dividing a number by zero.
+--The solution to exception related problems is simple. We just have to alter the normal flow of the program by a bit of code known as an exception handler.
+This code will save the state of the program up to the point where the exception occurred and will continue the normal flow from the code written outside the area of occurrence of an exception. 
+We can also print the exception by converting it into a string.
+This way program does not terminate but executes completely except for the area where the exception occurred.
+
+print("Enter num1")
+num1= input()
+print("Enter num2")
+num2= input()
+try:                                                  //ye use krte jab hmme doubt hota ye code chalega ya nhi but next code is imp usko koi run krne me pblm na ho
+     print("Sum is : " , int(num1) + int(num2))
+except Exception as e:
+    print(e)
+
+print("This is very important code")
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
+************Output*****************
+
+Enter num1
+2
+Enter num2
+r
+invalid literal for int() with base 10: 'r'          //error is printed as a string 
+This is very important code                          //and rest code will executed as it is
