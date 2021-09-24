@@ -1,0 +1,80 @@
+When we want to read or write a file (say on our hard drive), we must first open the file.
+When we open a file, we are asking the operating system to find the file by name, making sure the file exists.
+Python has a built-in open() function to open a file.
+
+The syntax of the function is:
+-->open("filename" ,"mode")
+
+f = open("tut27.txt")                   # We store this file object into a variable which is generally called as a file pointer/file handler. 
+content = f.read()                      #You can use this file pointer to further add modifications in the file. An error could also be raised if the operation fails while opening the file. 
+                                         #It could be due to various reasons like trying to access a file that is already closed or trying to read a file open in write mode.
+print(content)
+
+f.close()                               #  it's good habit to close the file which we have opened. However, Python runs a garbage collector to clean up the unused objects, but as good programmers, 
+                                        # we must not rely on it to close the file.
+_________________________________________________________________________________________________________________________________________________________________________
+***Output****
+
+hi I'm Zainab                           //this is our content of tut27.txt file
+I'm M.tech student
+___________________________________________________________________________________________________________________________
+
+f = open("tut27.txt", "rb")               //rt is default (read text)
+content = f.read()
+print(content)
+
+f.close()
+____________________________________________________________________________________________________________
+*******Output*******
+b"hi I'm Zainab\r\nI'm M.tech student\r\n"   //read in binary format
+
+___________________________________________________________________________________
+
+f = open("tut27.txt", "rt")
+content = f.read(233)                    //first 233 character of file will be printed
+print("1st content :" ,content)
+
+content = f.read(23)
+print("2st content :" ,content)             //is k liye ab kch bacha he nhi, nthing was printed
+
+f.close()
+_______________________________________________________
+**********Output************
+
+1st content : hi I'm Zainab
+I'm M.tech student
+
+2st content : 
+_________________________________________________________
+
+f = open("tut27.txt", "rt")
+
+for line in f:                        //we use this to view file line bt line
+     print(line, end ="")
+
+f.close()
+___________________________________________________________
+***********Output**********
+
+hi I'm Zainab
+I'm M.tech student
+____________________________________________________________
+
+f = open("tut27.txt", "rt")
+print(f.readline())
+print(f.readline())
+print(f.readline())  #jab bhi nyi line read krta to new line character bhi sath me lega
+_______________________________________________________________________________________________
+*********Output************
+
+hi I'm Zainab
+
+I'm M.tech student
+____________________________________________________________
+
+f = open("tut27.txt", "rt")
+print(f.readlines())
+____________________________________________________
+***********Output**********
+
+["hi I'm Zainab\n", "I'm M.tech student\n"]    #print in the form of list
