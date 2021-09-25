@@ -1,0 +1,51 @@
+-->Here “w” stands for write. After opening or creating a file, a function, f.write() is used to insert text into the file.
+The text is written inside closed parenthesis surrounded by double quotations. There is a certain limitation to the write mode of the opening file that it overrides the
+existing data into the file. For a newly created file, it does no harm, but in case of already existing files, the previous data is lost as f.write() overrides it.  
+
+f = open("tut27.txt", "w")
+f.write("Zainab Fatima")          //this will overwrite already existing file i.e tut27.txt
+f.close()                        // f is an object for the file. It is not a method or a special character. You will notice me using f.write() or f.read() or f.close(),
+                                    in further description or tutorial, but you can use character or word of your own choice instead.
+____________________________________________________________________________________________________________________________________________________________________________
+
+--> “a” symbolizes append mode here. In English, appends mean adding something at the end of an already written document, and the same is the function the mode performs here.
+Unlike write mode, when we use "a" keyword, it adds more content at the end of the existing content. The same function i.e., f.write() is used to add text to the file in append mode.
+It is worth noting that append mode will also create a new file if the file with the same name does not exist and can also be used to write in an empty file.
+
+f = open("tut27.txt", "a")
+f.write("Zainab Fatima\n")
+f.close()
+_________________________________________________________________________________________________________________________________________________________________________________________
+*****Output***
+Zainab Fatima   //this is added to tut27.txt file as we have run the program only 2 times
+Zainab Fatima
+________________________________________________________________________________________________
+
+f = open("tut27.txt", "a")
+a =f.write("Zainab Fatima\n")          //this will give no. of characters in our file i.e tut27.txt 
+print(a)
+f.close()
+________________________________________________________________________________________________________
+*********Output*******
+14    //aur tut27.txt file me 3 times zainab fatima print hojaiga as 3 baar run hua, coz of append mode
+___________________________________________________________________________________________________________
+
+f = open("tut27.txt", "w")             //open in write mode
+a =f.write("Zainab Fatima\n")
+print(a)
+f.close()
+____________________________________________________________________________
+**********Output************
+14      # no. of characters to output me whi dega, but tut27.txt file me sb pehle ka khtm kr k phrse ab run jo kia wo zainab fatima bss ek br print krega
+_____________________________________________________________________________________________________________________________________________________________________
+# Well, r+ mode is more of a combination of reading and append than read and write. By opening a file in this mode,
+we can print the existing content on to the screen by printing f.read() function and adding or appending text to it using f.write() function.
+
+
+f = open("tut27.txt", "r+")
+print(f.read())                   # reading the file
+f.write("Thank you")              #writing into tut27.txt file
+f.close()
+__________________________________________________________________________________________
+*********Output**********
+Zainab Fatima   # read hua , tut27.txt file me Thank you write hua hai
