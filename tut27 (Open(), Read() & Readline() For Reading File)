@@ -61,9 +61,9 @@ I'm M.tech student
 ____________________________________________________________
 
 f = open("tut27.txt", "rt")
+print(f.readline())        #This read line by line
 print(f.readline())
-print(f.readline())
-print(f.readline())  #jab bhi nyi line read krta to new line character bhi sath me lega
+print(f.readline())        #jab bhi nyi line read krta to new line character bhi sath me lega
 _______________________________________________________________________________________________
 *********Output************
 
@@ -73,7 +73,7 @@ I'm M.tech student
 ____________________________________________________________
 
 f = open("tut27.txt", "rt")
-print(f.readlines())
+print(f.readlines())                    #readlines with the "s"
 ____________________________________________________
 ***********Output**********
 
