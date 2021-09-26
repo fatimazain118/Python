@@ -1,0 +1,27 @@
+print("Printing Pattern")
+num= int(input("Enter the number no. rows you want : "))
+print("Enter 1 or 0")
+bool_val = input("1 for True or 0 for False : ")
+
+def star(num,bool_val):
+    if bool_val == 1:
+        c=1
+        while c<= num:
+            print(c * "*",end= " ")
+            c= c+1
+    else:
+        while num >0:
+            print(num * "*")
+            num  = num -1
+star(num,bool_val)
+____________________________________________________________________________
+**********Output**********
+
+Printing Pattern
+Enter the number no. rows you want : 4
+Enter 1 or 0
+1 for True or 0 for False : 1
+****
+***
+**
+*
