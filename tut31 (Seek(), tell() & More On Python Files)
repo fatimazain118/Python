@@ -1,0 +1,57 @@
+#-->tell() function. f.tell() returns an integer giving the file pointer current position in the file represented as a number of bytes. File Pointer/File Handler
+is like a cursor,which defines from where the data has to be read or written in the file. 
+Return Value:  seek() function returns the current position of the file pointer within the file.
+
+f= open("tut27.txt")
+print(f.tell())         #it tells where is the file pointer
+print(f.readline())
+print(f.tell())
+print(f.readline())       #print file line by line
+print(f.tell())
+_________________________________________________________________________
+********Output**********
+
+0                       #pehle file pointer yha tha
+Zainab Fatima            #file tut27.txt me ye 1st line h others are --> 1--Zainab Fatima
+                          # 2 line-->Thank you
+                              #3rd-->        3rd line
+                                    #4th-->   4th line
+
+15
+Thank you
+
+26
+___________________________________________________________________________
+seek() function--> When we open a file, the system points to the beginning of the file. Any read or write will happen from the start. To change the file object’s position, use seek(offset, whence) function.
+The position will compute by adding offset to a reference point, and the whence argument selects the reference point. It is useful when operating over an open file. 
+Syntax:  file_pointer .seek(offset, whence).
+Offset:   In seek() function, offset is required. Offset is the position of the read/write pointer within the file.
+Whence: This is optional. It defines the point of reference. The default is 0, which means absolute file positioning.
+
+
+f= open("tut27.txt")
+print(f.readline())            #read first line of file
+f.seek(4)                      #start reading again from given offset
+print(f.readline())            #then printed it
+_________________________________________________________________
+**********Output***************
+
+Zainab Fatima
+
+ab Fatima
+____________________________________________________________________
+f= open("tut27.txt")
+f.seek(4)
+print(f.tell())
+print(f.readline())
+print(f.readline())
+________________________________________________________
+************Output**************
+
+4                    #4th word pr agya hai pointer coz of seek function & printed by f.tell function
+ab Fatima            #1st line ko seek ne 4 tk la dia tha and f.readline printed it
+
+Thank you             #2nd line
+
+
+
