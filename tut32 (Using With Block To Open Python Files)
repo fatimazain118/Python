@@ -1,0 +1,14 @@
+another yet better and straightforward approach of opening and closing files is with block to open and close a file, including syntax and benefits.
+We will be using f as our file’s object. It's vital to close a file. If we do not close our file after we are done using it, then the file object will keep on consuming processor memory, and also,
+there will be more chances of exceptions as the file is still open hence, more chances of bugs.
+
+ syntax :
+With open(“file_name.txt”) as f:
+f being the object of the file. The important thing to note is, there is no close() function required. After running the code in the block, the file will automatically be closed.  
+
+with open("tut27.txt") as f:
+    a= f.read(4)
+    print(a)
+___________________________________
+***Output*****
+Zain
