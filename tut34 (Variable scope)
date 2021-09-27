@@ -1,0 +1,49 @@
+l= 10   #global variable
+def function(n):
+    print("Printing local variable")
+    l=3    
+    print(l)
+    print(n,"Inside the function")
+function("This is me")
+print("Printing global variable")
+print(l)
+____________________________________________
+*********Output********
+
+Printing local variable
+3
+This is me Inside the function
+Printing global variable
+10
+_____________________________________________________________________________________
+l= 10   #global variable
+def function(n):
+
+    global l     #changing global variable inside the function with global keyword
+    l= l+2
+    print(l)
+    print(n,"Inside the function")
+function("This is me")
+______________________________________________________________________________________________
+*********Output***************
+
+12
+This is me Inside the function
+_______________________________________________________________________________________________
+def harry():
+    x=56
+    def rohan():                       #nested function
+        global x
+        x=4
+    print("Before calling rohan", x)
+    rohan()
+    print("after calling rohan", x)
+
+harry()
+print(x)
+______________________________________________________________
+***********Output*************
+
+Before calling rohan 56               #harry ki local value  
+after calling rohan 56               #isme global ki value isliye change nhi krri qki global keyword lgate he control harry functio k bahr chala jaiga,aur bahr koi global ki value set he nhi
+4                                  #ye bahr se print hora to isme set hui value print hogi
