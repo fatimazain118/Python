@@ -1,0 +1,32 @@
+In Python programming, an anonymous function or lambda expression is a function definition that is not bound to an identifier (def).
+
+The anonymous function is an inline function(An inline function is one for which the compiler copies the code from the function definition directly into the code of the
+calling function rather than creating a separate set of instructions in memory.)The anonymous functions are created using a lambda operator and cannot contain multiple expressions.
+
+minus = lambda x,y: x-y
+
+print(minu s(2,1))
+____________________________________
+*****Output******
+
+1
+________________________________________
+def a_first(a):
+    return a[0]
+
+a= [[1,2], [4,14], [2,1]]
+a.sort(key=a_first)
+print(a)
+________________________________________
+*****Output******
+[[1, 2], [2, 1], [4, 14]]
+_______________________________________________
+****will work same as above function***********
+
+
+a= [[1,2], [4,14], [2,1]]
+a.sort(key= lambda x:x[0])                 #Sort() does not return any value, but it changes from the original list.
+print(a)
+___________________________________________________
+**********Output********
+[[1, 2], [2, 1], [4, 14]]
