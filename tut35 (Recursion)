@@ -1,0 +1,60 @@
+"Recursion occurs when a function calls itself."
+There are two essential and significant parts of a recursive function. The first one is the base case, and the second one is the recursive case. In the base case, a
+conditional statement is written, which the program executes at the end, just before returning values to the users. In the recursive case, the formula or logic the function is
+based upon is written.A recursive function terminates to get closer to its base case or base condition. 
+
+Recursion vs. Iteration:
+-->Recursion can only be applied to a function, while iteration can be used for any number of lines of code, we want to repeat
+-->In the case of recursion, if the condition is not met, the system will repeat a few times and then crash while in case of iteration it will continue to run endlessly.
+
+def fact_iterative(n):
+    fac =1
+    for i in range(n):     #i 0 se n-1 tk jaiga
+        fac= fac * (i+1)   #i+1 coz 0 se multiply nhi krna hai
+    return fac
+
+print("Enter number")
+n= int(input())
+print("Factorial using iterative approach :", fact_iterative(n))
+_________________________________________________________________________________
+**********Output**********
+Enter number
+4
+Factorial using iterative approach : 24
+_________________________________________________________________________________
+
+def fact_recursive(n):
+    if n==1:
+        return 1
+    elif n==0:
+        return 1
+    else:
+        return n * fact_recursive(n-1)
+
+print("Enter number")
+n= int(input())
+print("Factorial using recursive approach :", fact_recursive(n))
+_____________________________________________________________________________________
+********Output******************
+
+Enter number
+0
+Factorial using recursive approach : 1
+________________________________________________________________________
+def fib(n):
+    if n==1:
+        return 1
+    elif n==2:
+        return 1
+    else:
+        return fib(n-1) + fib (n-2)
+
+print("Enter number")
+n= int(input())
+print("Value at position", n ,"in fibonacci series is:", fib(n))
+______________________________________________________________________
+***********Output***************
+
+Enter number
+3
+Value at position 3 in fibonacci series is: 2
