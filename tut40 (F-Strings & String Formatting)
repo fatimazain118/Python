@@ -1,0 +1,48 @@
+#1 String Formatting (% Operator)
+
+name= "zainab"   #like 1 in place of zainab The problem with this method is when we have to deal with large strings. If we specify the wrong type of input type operator,
+then it will throw an error.
+
+n= "My name is %s" %name
+print(n)
+___________________________________________
+*****Output***********
+ My name is zainab
+ 
+ ______________________________________________________________
+#2 Using Tuple () -->  The % operator takes only one argument, to mention more than one argument, use tuples. 
+ 
+ name= "zainab"
+a = 3
+n ="%s is in class %d" %(name, a)
+print(n)
+____________________________________________________
+************Output*********
+zainab is in class 3
+___________________________________________________________
+#3  String Formatting (str.format)
+
+me ="Python"
+a1 = 3.7
+a= "This lang is in: {0} {1} version"
+b= a.format(me,a1)
+print(b)
+______________________________________________________
+*********Output*************
+This lang is in: Python 3.7 version
+______________________________________________________
+
+#4 Using f-Strings ( f ):
+Python added a new string formatting approach called formatted string literals or "f-strings." This is a new way of formatting strings.
+
+str1 = "Python"
+str2 = "Programming"
+
+print(f"Welcome to our {str1} {str2} tutorial")
+________________________________________________________________
+**********Output*********
+Welcome to our Python Programming tutorial
+
+
+ 
+ 
