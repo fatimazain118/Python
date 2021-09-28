@@ -1,0 +1,30 @@
+In Python, a module can be defined as a file containing a runnable python code. The extension used by modules in Python is .py. Hence any simple file containing Python code
+can be considered as a module if its extension is .py. The file and module names are the same; hence we can call a module only by name without using the extension.
+
+There are two types of modules.
+
+Built-in
+External
+
+Built-in Modules:
+Built-in modules are already installed in Python by default. We can import a module in Python by using the import statement along with the specific module name. 
+
+External modules:
+External modules have to be downloaded externally; they are not already present like the built-in ones. Installing them is a rather easy task and can be done by using the command
+“pip install module_name” in the compiler terminal.
+
+Python provides us with a lot of modules that make our coding much easy because we do not have to write all the code ourselves. We can directly access a module for a specific task
+___________________________________________________________________________________________ 
+ import random                 //importing module
+
+random_number = random.randint(0,6)             //randint is a function inside our imported module
+print(random_number)                    #generates random no.
+
+lst = ["star plus", "zee tv", "sony"]
+choice = random.choice(lst)
+print(choice)
+_______________________________________________________________
+**************Output***********
+
+5            //generated random output
+zee tv
