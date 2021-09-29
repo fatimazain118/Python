@@ -1,0 +1,44 @@
+The execution time of a program is defined as the system's time to execute the task. As we know, all program takes some execution time, but we don't know how much
+In Python, time can be tracked through its built-in libraries. The time module consists of all time-related functions. It also allows us to access several types of clocks required for various purposes.
+
+import time
+
+initial1 = time.time()           #time function in time module returns seconds
+k=0
+while k<5:
+    print("This is while loop")
+    k +=1
+print("Time taken to run while loop is: ", time.time() -initial1, "Seconds")
+
+initial2 = time.time()
+
+for i in range(5):
+    print("This is for loop")
+print("For loop ran in time:", time.time()-initial2, "Sec")
+_________________________________________________________________________________________
+*****************Output************
+
+This is while loop
+This is while loop
+This is while loop
+This is while loop
+This is while loop
+Time taken to run while loop is:  0.0 Seconds
+This is for loop
+This is for loop
+This is for loop
+This is for loop
+This is for loop
+For loop ran in time: 0.0 Sec
+_____________________________________________________________________________
+import time
+localTime = time.asctime(time.localtime(time.time()))               #time.time() return seconds, localtime return local time, and asctime return the tuple in the format given
+print(localTime)
+__________________________________________________________________________________
+************Output****************
+Wed Sep 29 16:39:00 2021
+
+____________________________________________________________________________________________
+Time.sleep():
+What sleep() function does is, it sends the program to sleep for some defined number of seconds. sleep() function is mostly used in programs directly connected to the operating system and in-game development. It halts the program execution, giving other programs a chance to get executed simultaneously. 
+time.sleep(5)   #this will print the output after the interval of 5 sec
