@@ -1,0 +1,68 @@
+There are two types of arguments that can be passed in a function.
+
+positional arguments
+keyword arguments
+
+Positional arguments are the one in which an order has to be followed while passing arguments.
+
+Asterisk is used in python as a mathematical symbol for multiplication, but in case of arguments, it refers to unpacking.
+The unpacking could be for a list, tuple, or a dictionary.
+
+*args:
+args is a short form used for arguments. It is used to unpack an argument. In the case of *args, the argument could be a list or tuple.Suppose that we have to enter the name
+of students who attended a particular lecture. Each day the number of students is different, so positional arguments would not be helpful because we can not leave an argument
+empty in that case. So the best way to deal with such programs is to define the function using the class name as formal positional argument and student names with parameter *args. 
+In this way, we can pass student's names using a tuple.
+Note that the name args does not make any difference, we can use any other name, such as *myargs. The only thing that makes a difference is the Asterisk(*).
+
+def function(normal,*args):
+    print(normal)
+    for item in args:
+        print(item)
+
+A = ["Harry", "marry","carry", "Larry"]                   #yha no. of students add ya delete krne se argument passing me pblm nhi aaigi
+normal = "This is normal argument and the students are:"
+function(normal, *A)                                      #this is passed as position arguments
+__________________________________________________________________
+********Output***************
+
+This is normal argument and the students are:
+Harry
+marry
+carry
+Larry
+_____________________________________________________________________________________________________________________________________________________________________________
+**kwargs:
+The full form of **kwargs is keyword arguments. It passes the data to the argument in the form of a dictionary. Let's take the same example we used in the case of *args. 
+The only difference now is that the student's registration, along with the student's name, has to be entered. So what **kwargs does is, it sends argument in the form of key
+and value pair. So the student's name and their registration both can be sent as a parameter using a single ** kwargs statement.
+
+Same as we discussed for args*, the name kwargs does not matter.The only mandatory thing is the double asterisks we placed before the name.  
+
+def function(normal,*args, **kwargs):
+    print(normal)
+    for item in args:
+        print(item)
+    print("\nNow intoducing heros of our class")
+    for key,value in kwargs.items():         #syntax of kwargs
+        print(f"{key} is a {value}")
+
+A = ["Harry", "marry","carry", "Larry"]
+normal = "This is normal argument and the students are:"
+
+kw = {"zainab":"Monitor", "Rohan" : "CR", "Sohan": "cook"}          #here we can add any more key-value pair
+function(normal, *A, **kw)  #first normal will come then args then kwargs
+_______________________________________________________________________________________________
+************Output*****************
+
+This is normal argument and the students are:
+Harry
+marry
+carry
+Larry
+
+Now intoducing heros of our class
+zainab is a Monitor
+Rohan is a CR
+Sohan is a cook
+
