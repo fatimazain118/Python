@@ -1,0 +1,153 @@
+import random
+
+lst = ['s', 'w', 'g']
+chance = 10
+no_of_chance=0
+computer_point =0
+human_point = 0
+
+print("\t \t \t Snake Water Gun Game\n \n")
+print("Select s for snake\n w for water \n g for gun \n")
+
+while no_of_chance < chance:
+    user_input =input('Snake, Water, Gun:')
+    _random = random.choice(lst)                         #random module imported and put in a variable whose name should not be the keyword 
+
+
+    if user_input == _random:
+        print("Tie 0 points to each\n")
+
+    elif user_input == "s" and _random =="g":
+
+        print(f"You guess {user_input} and computer guess {_random}\n ")
+        print("computer win 1 point\n")
+        computer_point = computer_point + 1
+        print(f"computer points are {computer_point} and your points are {human_point}")
+
+    elif user_input =="g" and _random == "s":
+
+        print(f"You guessed {user_input} and computer guessed {_random}")
+        print("You Won 1 point")
+        human_point = human_point + 1
+        print(f"computer points are {computer_point} and your points are {human_point}")
+
+    elif user_input == "s" and _random =="w":
+
+        print(f"You guessed {user_input} and computer guessed {_random}")
+        print("human Won 1 point")
+        human_point = human_point + 1
+        print(f"computer points are {computer_point} and your points are {human_point}")
+
+    elif user_input == "g" and _random =="w":
+
+        print(f"You guessed {user_input} and computer guessed {_random}")
+        print("computer Won 1 point")
+        computer_point = computer_point + 1
+        print(f"computer points are {computer_point} and your points are {human_point}")
+
+    elif user_input == "w" and _random =="g":
+
+        print(f"You guessed {user_input} and computer guessed {_random}")
+        print("human Won 1 point")
+        human_point = human_point + 1
+        print(f"computer points are {computer_point} and your points are {human_point}")
+
+    elif user_input == "w" and _random =="s":
+
+        print(f"You guessed {user_input} and computer guessed {_random}")
+        print("computer Won 1 point")
+        computer_point = computer_point + 1
+        print(f"computer points are {computer_point} and your points are {human_point}")
+
+    else:
+        print("You have input wrong input")
+
+    no_of_chance = no_of_chance +1
+    print(f"chances left {chance - no_of_chance} out of {chance}\n")
+
+print("Game Over")
+print(f"Your score is {human_point} and computer score is {computer_point}")
+if human_point == computer_point:
+    print("Tie")
+
+elif human_point > computer_point:
+    print("You Won")
+
+else:
+    print("You loose")
+_________________________________________________________________________________________________________________
+**************Output*******************
+
+ 	 Snake Water Gun Game
+ 
+
+Select s for snake
+ w for water 
+ g for gun 
+
+Snake, Water, Gun:s
+You guess s and computer guess g
+ 
+computer win 1 point
+
+computer points are 1 and your points are 0
+chances left 9 out of 10
+
+Snake, Water, Gun:s
+Tie 0 points to each
+
+chances left 8 out of 10
+
+Snake, Water, Gun:s
+Tie 0 points to each
+
+chances left 7 out of 10
+
+Snake, Water, Gun:s
+You guessed s and computer guessed w
+human Won 1 point
+computer points are 1 and your points are 1
+chances left 6 out of 10
+
+Snake, Water, Gun:s
+You guess s and computer guess g
+ 
+computer win 1 point
+
+computer points are 2 and your points are 1
+chances left 5 out of 10
+
+Snake, Water, Gun:s
+Tie 0 points to each
+
+chances left 4 out of 10
+
+Snake, Water, Gun:s
+Tie 0 points to each
+
+chances left 3 out of 10
+
+Snake, Water, Gun:s
+Tie 0 points to each
+
+chances left 2 out of 10
+
+Snake, Water, Gun:s
+You guess s and computer guess g
+ 
+computer win 1 point
+
+computer points are 3 and your points are 1
+chances left 1 out of 10
+
+Snake, Water, Gun:s
+You guess s and computer guess g
+ 
+computer win 1 point
+
+computer points are 4 and your points are 1
+chances left 0 out of 10
+
+Game Over
+Your score is 1 and computer score is 4
+You loose
