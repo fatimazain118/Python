@@ -1,0 +1,33 @@
+list = ["Bhindi", "aloo", "sugar", "chopsticks"]
+
+i=1
+for item in list:
+    if i%2 is not 0:
+       print(f"john please bring {item}")
+    i +=1
+_____________________________________________________________
+**************Output*************
+
+john please bring Bhindi
+john please bring sugar
+__________________________________________________________________
+“ An enumerate is a built-in function that provides an index to data structure elements, making iterations through them easier and simpler.” 
+many methods that print items of different data structures onto the screen. For these kinds of operations, we need to have a for loop along with an iterator and an integer
+variable in which we have to increment every time the loop runs. Well, python provides us with a simple and easy solution to deal with certain situations by providing us with
+a built-in function known as “enumerate function.” Using the enumerate function, we can summarize the code and make it easier and simpler to use.
+
+What enumerate function does is, it assigns an index to every element or value in the object that we want to iterate, so we do not have to assign a specific variable for
+incremental function, instead we have to apply a for loop, and our function will start working. Its syntax is a lot simpler and shorter than what we have been following till now.
+
+Syntax
+enumerate(iterable, start=0)
+
+
+for index, item in enumerate(list):               #no need to declare i
+    if index%2 ==0:                               #i is starting frm 0 and we need odd no. digits
+       print(f"John please bring {item}")
+_____________________________________________________________________
+***********Output***********
+John please bring Bhindi                       #output is same as using for loop like above
+John please bring sugar
+ 
