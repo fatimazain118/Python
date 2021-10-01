@@ -1,0 +1,62 @@
+#tut47main1.py
+
+def printhar(string):
+    return f"Ye string printhar ka hai {string}"
+
+def add(num1 , num2):
+    return num1 + num2 +4
+
+print(printhar("Harry"))
+o = add(4,5)
+print(o)
+____________________________________________________________
+******Output*********
+Ye string printhar ka hai Harry
+13
+____________________________________________________________
+
+#tut47main2.py
+
+import tut47main1
+print(tut47main1.add(4,2))
+__________________________________________________________
+**********Output************
+Ye string printhar ka hai Harry           #these two lines are run coz of imported tut47main1 to stop running in this tut47main2 we use main
+13
+10
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+#tut47main1
+
+def printhar(string):
+    return f"Ye string printhar ka hai {string}"
+
+def add(num1 , num2):
+    return num1 + num2 +4
+
+print("and the name is",__name__)
+if __name__ == '__main__':             #ab ye main wala content bss yhi se run hoga kahi bahr se nahi
+    print(printhar("Harry"))
+    o = add(4,5)
+    print(o)
+________________________________________________________
+*********Output**********
+and the name is __main__
+Ye string printhar ka hai Harry
+13
+____________________________________________________________________
+
+#tut47main2
+
+import tut47main1
+print(tut47main1.add(4,2))
+___________________________________________________
+********Output**********
+and the name is tut47main1
+10
+
+“A __name__ is a built-in variable that returns us the name of the module being used.”
+
+In simple words, by using __name__, we can check whether our module is being imported or run directly.
+
+If we run it in the same module that it is created in, then it will print “main” onto the screen; otherwise, if it is being used elsewhere, then it will print the name of its
+module or file it is created in.
