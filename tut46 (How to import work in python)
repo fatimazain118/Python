@@ -1,0 +1,26 @@
+A common mistake that most of the beginners do is, why can’t we name our file, the same as the name of a module. The reason is associated with the path. When we give our file
+a name same as the name of a module, then instead of importing the original module, the system will import our created file because it starts its search for the file from
+the directory where the file we are working on exists. So, we will not be able to use the functions of the original file.
+
+import file2tut46
+print(file2tut46.a)
+______________________________
+****Output********
+7        # file2tut46 is a another python file having a=7
+___________________________________________________________________
+
+from file2tut46 import a
+print(a)                                       #we dont import like this as its not good programmer practice because import "a" can be from different file agar file3 me bhi "a" 
+                                                      hua uska bhi import hojaiga
+                                                      
+file2tut46.print_joke("This is for calling")     #like this we can use functions of another python file by just importing them
+_______________________________________________________________________________________________________________________________
+************Output*************
+7
+We are in joke function This is for calling
+
+########file2tut46 file contains#########
+a =7                                                                        #\
+def print_joke(str):
+    print(f"We are in joke function {str}")
+_________________________________________________________________________________________________    
