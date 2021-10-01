@@ -1,0 +1,37 @@
+list = ["harry" , "Larry", "Carry"]
+
+for item in list:
+    print(item ,"," ,end ="")
+
+print("and other students")
+_______________________________________________
+******Output***********
+harry ,Larry ,Carry ,and other students
+__________________________________________________
+
+#using join
+"Join is a function in Python, that returns a string by joining the elements of an iterable, using a string or character of our choice."
+In the case of join function, the iterable can be a list, dictionary, set, tuple, or even a string itself. The string that separates the iterations could be anything.
+It could just be a comma or a full-length string. We can even use a blank space or newline character (/n ) instead of a string.
+
+The syntax of the join() method is:
+string.join(iterable)
+
+list = ["harry" , "Larry", "Carry"]
+
+a = ",".join(list)
+print(a, "and other students")
+______________________________________________________________
+************Output************
+harry,Larry,Carry and other students
+
+ limitations to join() function
+-->  For join to function properly, all the variables should have the same sort of data type, either it is an integer, string, or any other.
+--> In the case of the dictionary, the join function will only return the key part, separated by the string in between, leaving the value side behind.
+
+For Example:
+myDictionary = {"name": "Jack", "country": "America"}
+separator = "_separator_"
+print(separator.join(myDictionary))
+Output:
+name_separator_country  
