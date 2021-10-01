@@ -1,0 +1,118 @@
+number = ["3", "45" , "2"]
+
+for i in range(len(number)):       #len likha coz range k andr no. he ate
+    number[i] = int(number[i])
+
+number[2] = number[2] +1
+print(number[2])
+___________________________________________________________________________________
+*******Output***********
+3
+________________________________________________________________
+#############using map function#############
+map():
+"A map function executes certain instructions or functionality provided to it on every item of an iterable."
+
+SYNTAX:
+map(function, iterable) 
+A map function takes two parameters:
+
+-->First one is the function through which we want to pass the items/values of the iterable
+-->The second one is the iterable itself
+
+number = ["3", "45" , "2"]
+
+number = list(map(int, number))                             #map() return object toh variable me assign in form of list
+number[2] = number[2] +1
+print(number[2])
+_____________________________________________________
+******Output****
+3
+_____________________________________________________
+number = [2,3, 6]
+
+def sq(a):
+    return a*a
+
+square = list(map(sq,number))
+print(square)
+______________________________________________________________
+***********Output***********
+
+[4, 9, 36]
+______________________________________________________
+def sq(a):
+    return a*a
+
+def cube(a):
+    return a*a*a
+f= [sq, cube]
+for i in range(5):
+    val= list(map(lambda x: x(i),f))
+    print(val)
+____________________________________________________
+********Output************
+
+[0, 0]
+[1, 1]
+[4, 8]
+[9, 27]
+[16, 64]
+_________________________________________________________
+lis = [1,4,6,7,8,9]
+
+def is_greater_5(num):
+    return num>5
+gr_than_5 = list(map(is_greater_5,lis))
+print(gr_than_5)
+_____________________________________________________
+******Output***********
+[False, False, True, True, True, True]
+_______________________________________________________
+#############Filter function##########
+
+lis = [1,4,6,7,8,9]
+
+def is_greater_5(num):
+    return num>5
+gr_than_5 = list(filter(is_greater_5,lis))
+print(gr_than_5)
+________________________________________________________
+*********Output***********
+[6, 7, 8, 9]
+___________________________________________________
+#using lambda function
+number = [2,3, 6]
+
+def sq(a):
+    return a*a
+
+square = list(map(lambda x: x*x, number))
+print(square)
+______________________________________________________________
+*******Output**********
+[4, 9, 36]
+___________________________________________________________
+##########Reduce##############
+"Reduce functions apply a function to every item of an iterable and gives back a single value as a resultant".
+
+Unlike the previous two functions (Filter and Map), we have to import the reduce function from functools module
+
+lis = [1,23,4,2]
+
+num= 0
+for i in lis:
+    num = num+i
+print(num)
+__________________________________________
+*****Output********
+30  #sum of lis
+____________________________________________
+from functools import reduce
+lis = [1,23,4,2]
+
+num = reduce(lambda x,y:x+y, lis)
+print(num)
+_________________________________________________
+******Output********
+30
