@@ -1,0 +1,12 @@
+	Object-oriented programming is the problem-solving approach. The computation is done by using objects.
+  	OOP provides a proper way for data hiding.
+    In object-oriented programming, the program splits into self-contained objects. Each object represents a different part of the application which can communicate among
+    themselves.
+    
+    A class is a collection of objects, and an object is defined as an instance of a class possessing attributes.
+    A class has all the similar attributes, like if we have a class students, then it will only consist of students' related data, such as subjects, names, attendance ratio, etc
+    
+    By using oop, we can divide our code into many sections known as classes. Each class holds a distinct purpose or usage.
+    There is no limit to the number of classes we can create in a program. Also, one class can be easily accessible by another, and we can also restrict the access of a class
+    so other classes can not use its functions.
+    
