@@ -1,0 +1,45 @@
+When working with objects in Python, we have to work with two types of variables, i.e., instance variables and class variables
+
+Instance variable:
+"Instance variables are the variables for which the value of the variable is different for every instance."
+The object can change, create, or update only its instance variables.
+They are destroyed when the object is destroyed.
+Changes made to the variable don't affect the other instances of that class.
+ ObjectReference.VariableName.
+ 
+Class variable:
+"Class attributes are owned by the class directly, which means that they are not tied to any object or instance."
+ClassName.VariableName.
+
+class Employee:
+    no_of_leaves= 7     #class variable
+    pass
+
+harry = Employee()
+harry.name = "Harry"
+harry.salary = 4000
+harry.role = "SDE"
+
+rohan = Employee()
+rohan.name = "Rohan"    #here name is instance variable
+rohan.salary = 5000
+rohan.role = "Engineer"
+
+print(Employee.no_of_leaves)
+print(harry.no_of_leaves)
+print(harry.__dict__)
+harry.no_of_leaves = 40         #Instance se class k variable ko change nhi kr skte, balki ye apna ye variable bna lega aisa
+print(harry.__dict__)
+Employee.no_of_leaves = 10
+print(Employee.__dict__)
+print(harry.__dict__)
+print(Employee.no_of_leaves)
+_______________________________________________________________________________________________________________________________________
+*************Output*****************
+7
+7
+{'name': 'Harry', 'salary': 4000, 'role': 'SDE'}
+{'name': 'Harry', 'salary': 4000, 'role': 'SDE', 'no_of_leaves': 40}
+{'__module__': '__main__', 'no_of_leaves': 10, '__dict__': <attribute '__dict__' of 'Employee' objects>, '__weakref__': <attribute '__weakref__' of 'Employee' objects>, '__doc__': None}
+{'name': 'Harry', 'salary': 4000, 'role': 'SDE', 'no_of_leaves': 40}
+10
