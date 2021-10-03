@@ -1,0 +1,67 @@
+Functions in Python can be defined as lines of codes built to create a specific task and can be used again and again in a program when called.
+
+def function1():
+    print("Hii")
+
+func = function1
+del function1      #yha delete krne k bd bhi chal gya coz pehle se he func me save hogya tha
+func()
+______________________________________________________________________________________________
+**********Output***********
+Hii
+_____________________________________________________
+
+def func(num):
+    if num ==0:
+        return print                   #we can return function with the help of functions
+    if num==1:
+        return int
+a= func(0)
+print(a)
+________________________________________________
+**********Output*************
+<built-in function print>
+__________________________________________________
+
+def executor(func):                  #we can also pss function as an argument inside a function
+    func("Hii")
+
+executor(print)
+____________________________________________________
+***********Output**************
+Hii
+______________________________________________________________________________________________________________________________________________________________________________
+
+#The decorator can be said to be a modification to the external layer of function, as it does not change its structure. A decorator takes a function and inserts some new
+functionality in it without changing the function itself. A reference to a function is passed to a decorator, and the decorator returns a modified function. The modified 
+functions usually contain calls to the original function. This is also known as metaprogramming.
+
+Note that a decorator is called before defining a function. In terms of Python, the other function is also called a wrapper.
+
+There are two ways to write a Python decorator:
+-->We can pass our function to the decorator as an argument, thus defining a function and passing it to our decorator.
+-->We can simply use the @ symbol before the function we’d like to decorate.
+ Advantages:
+• Decorator function can make our work compact because we can pass all the functions to a decorator that requires the same sort of code 
+
+def dec(func):
+    def executor():
+        print("Executing now")
+        func()
+        print("Executor end")
+    return executor
+
+
+@dec
+
+def function_to_be_used():
+    print("Zainab is a student")
+    
+# function_to_be_used = dec(function_to_be_used)  #same as write @dec above
+function_to_be_used()
+______________________________________________________________________________
+********Output**************
+
+Executing now
+Zainab is a student
+Executor end
