@@ -1,0 +1,33 @@
+As we have observed in the previous tutorials, we cannot change the value of a variable defined in the class from outside using an object. Instead, if we try that, a new
+instance variable will be created for the class having the value we assigned. But no change will occur in the original value of the variable.
+
+we are going to know the working of a new keyword, i.e., cls. Class methods take cls parameter that points to the class and not the object instance when the method is called.
+The Python class method is a way to define a function for the Python class. It receives the class as an implicit first argument.
+
+
+class Employee:
+    no_of_leaves = 8
+    pass
+    def __init__(self, _name, _salary, _role):   #self me object ka naam aaiga
+        self.name = _name
+        self.salary = _salary
+        self.role = _role
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+    @classmethod                                                #A @classmethod Decorator is a built-in function in Python. It can be applied to any method of the class. We can
+                                                                         change the value of variables using this method too.
+    def change_leaves(cls, newleaves):
+        cls.no_of_leaves =newleaves
+
+harry =Employee("Harry",4000, "SDE")
+
+harry.change_leaves(34)            #change_leaves defines the function that needs to be converted into a class method
+Employee.change_leaves(4)
+print(harry.no_of_leaves)
+print(Employee.no_of_leaves)
+_______________________________________________________________________________________________________
+***********Output**********************
+4
+4
