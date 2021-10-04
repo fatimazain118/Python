@@ -1,0 +1,58 @@
+Method:
+A method is just like a function, with a def keyword and a single parameter in which the object's name has to be passed. The method's purpose is to show all the details related
+to the object in a single go. 
+
+Self keyword:
+The self keyword is used in the method to refer to the instance of the current class we are using. The self keyword is passed as a parameter explicitly every time we define a
+method.
+
+class Employee:
+    pass
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+harry = Employee()
+harry.salary = 4000
+harry.role = "SDE"
+harry.name = "Harry"
+
+rohan = Employee()
+rohan.salary = 5000
+rohan.role = "Instructor"
+rohan.name = "Rohan"
+print(rohan.printdetails())          //jis object ka call hoga wo self me chala jaiga automatically
+______________________________________________________________________________________________________
+******Output**********
+The Name is Rohan. Salary is 5000 and role is Instructor
+____________________________________________________________________________________________
+
+__init__ method:-
+"__init__" is also called a constructor in object-oriented terminology. Whereas a constructor is defined as:
+
+"Constructor in Python is used to assign values to the variables or data members of a class when an object is created."
+As there can be only one constructor for a specific class, so the name of the constructor is a constant, i.e., __init__.
+____________________________________________________________________________________________________________________________
+class Employee:
+    pass
+    def __init__(self, _name, _salary, _role):   #self me object ka naam aaiga
+        self.name = _name
+        self.salary = _salary
+        self.role = _role
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+harry = Employee("Harry", 455, "SDE")   #aise argument pass krne k liye constructor bnana hoga i.e init func
+print(harry.printdetails())
+print(harry.salary)
+________________________________________________________________________________________________________________________
+***************Output*************
+The Name is Harry. Salary is 455 and role is SDE
+455
+__________________________________________________________________________________________________________________
+Method vs. Function:
+Methods and functions are very similar, yet there are some differences:
+
+-->Methods are explicitly for Object-Oriented programming.
+-->The method can only be used by the object that it is called for. In simple terms, for a method, the parameter must be an object.
+-->The method can only access the data that is initialized in the class the method is formed in. 
