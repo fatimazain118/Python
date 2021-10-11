@@ -1,0 +1,56 @@
+p = int(input("Enter the row number of matrix 1:"))  # (p*n) * (n*q) --->  (p*q) result matrix
+q = int(input("Enter the column number of matrix 2:"))
+n = int(input("Enter the no. of column / no. of rows of matrix 2:"))
+
+print("Enter the elements for matrix 1:")
+matrix1 = [[int(input()) for i in range(n)] for j in range (p)]  #this will take input from user and print first column then row in matrix 1
+print("Matrix 1 is:")
+for i in range(p):                       #this for loop is to print the matrix
+    for j in range(n):
+        print(format(matrix1[i][j], "<3"), end= "")
+    print()
+
+print("Enter the elements for matrix 2:")
+matrix2 = [[int(input()) for i in range(q)] for j in range (n)]
+print("Matrix 2 is:")
+for i in range(n):
+    for j in range(q):
+        print(format(matrix2[i][j], "<3"), end= "")
+    print()     #to give space after each row
+
+result = [[0 for i in range(q)] for j in range (p)]
+for i in range(p):
+    for j in range(q):
+        for k in range(n):
+            result[i][j] = result[i][j] + matrix1[i][k] * matrix2[k][j]
+
+print("Result of multiplication of matrix1 and matrix 2 is:")
+for i in range(p):
+    for j in range(q):
+         print(format(result[i][j] , "<3"), end = "")
+    print()
+__________________________________________________________________________________________________________________________________
+*****************Output**********************
+Enter the row number of matrix 1:2
+Enter the column number of matrix 2:2
+Enter the no. of column / no. of rows of matrix 2:2
+Enter the elements for matrix 1:
+1
+2
+3
+4
+Matrix 1 is:
+1  2  
+3  4  
+Enter the elements for matrix 2:
+2
+3
+1
+4
+Matrix 2 is:
+2  3  
+1  4  
+Result of multiplication of matrix1 and matrix 2 is:
+4  11 
+10 25 
+
