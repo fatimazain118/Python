@@ -1,0 +1,68 @@
+row = int(input("Enter the no. of rows:"))
+col = int(input("Enter no. of columns:"))
+
+if row != col:
+    print("Not square matrix")
+else:
+    print("Enter the elements of your matrix ")
+    matrix = [[int(input()) for i in range(row)] for j in range(col)]
+
+print("Your upper triangle of matrix is:")
+for i in range(row):
+    for j in range(col):
+        if (i<=j):
+          print(format(matrix[i][j], "<3"), end = "")
+        else:
+            print(format(0, "<3"), end = "")
+    print()
+_______________________________________________________________
+*************Output*****************
+Enter the no. of rows:2
+Enter no. of columns:2
+Enter the elements of your matrix 
+1
+2
+3
+4
+Your upper triangle of matrix is:
+1  2  
+0  4  
+__________________________________________________________________________
+
+row = int(input("Enter the no. of rows:"))
+col = int(input("Enter no. of columns:"))
+
+if row != col:
+    print("Not sqaure matrix")
+else:
+    print("Enter the elements of your matrix ")
+    matrix = [[int(input()) for i in range(row)] for j in range(col)]
+    print("Your matrix is:")
+    for i in range(row):
+       for j in range(col):
+          print(format(matrix[i][j], "<3"), end = "")
+       print()
+
+count = 0
+for i in range(row):
+    for j in range(col):
+        if (i>j and matrix[i][j] != 0):
+            count = 1
+if count ==1:
+    print("Not upper triangular")
+else:
+    print("Upper triangular")
+__________________________________________________________________________________________
+*****************Output**************
+Enter the no. of rows:2
+Enter no. of columns:2
+Enter the elements of your matrix 
+1
+2
+3
+4
+Your matrix is:
+1  2  
+3  4  
+Not upper triangular
+
