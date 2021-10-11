@@ -1,0 +1,107 @@
+row = int(input("Enter the row number:"))                           #No. of rows and col should be same for addition and sub in matrix that's why written once
+col = int(input("Enter the column number:"))
+
+print("Enter the elements for matrix 1:")
+matrix1 = [[int(input()) for i in range(col)] for j in range (row)]                 #this will take input from user and print first column then row in matrix 1
+print("Matrix 1 is:")
+for i in range(row):                                                      #this for loop is to print the matrix
+    for j in range(col):
+        print(format(matrix1[i][j], "<3"), end= "")
+    print()
+
+print("Enter the elements for matrix 2:")
+matrix2 = [[int(input()) for i in range(col)] for j in range (row)]
+print("Matrix 2 is:")
+for i in range(row):
+    for j in range(col):
+        print(format(matrix2[i][j], "<3"), end= "")
+    print()     #to give space after each row
+
+result = [[0 for i in range(col)] for j in range (row)]                #initially result me 0 hai then will filling one by one
+for i in range(row):
+    for j in range(col):
+        result[i][j] = matrix1[i][j] + matrix2[i][j]
+
+print("Addition of matrix1 and matrix 2 is:")
+for i in range(row):
+    for j in range(col):
+         print(format(result[i][j] , "<3"), end = "")
+    print()
+_________________________________________________________________________________________________________________________________
+**************Output*******************
+Enter the row number:2
+Enter the column number:2
+Enter the elements for matrix 1:
+1
+2
+3
+4
+Matrix 1 is:
+1  2  
+3  4  
+Enter the elements for matrix 2:
+2
+3
+4
+5
+Matrix 2 is:
+2  3  
+4  5  
+Addition of matrix1 and matrix 2 is:
+3  5  
+7  9
+_________________________________________________________________________________________________________________________
+
+row = int(input("Enter the row number:")) 
+col = int(input("Enter the column number:"))
+
+print("Enter the elements for matrix 1:")
+matrix1 = [[int(input()) for i in range(col)] for j in range (row)]  
+print("Matrix 1 is:")
+for i in range(row):                 
+    for j in range(col):
+        print(format(matrix1[i][j], "<3"), end= "")
+    print()
+
+print("Enter the elements for matrix 2:")
+matrix2 = [[int(input()) for i in range(col)] for j in range (row)]
+print("Matrix 2 is:")
+for i in range(row):
+    for j in range(col):
+        print(format(matrix2[i][j], "<3"), end= "")
+    print()     #to give space after each row
+
+result = [[0 for i in range(col)] for j in range (row)]
+for i in range(row):
+    for j in range(col):
+        result[i][j] = matrix1[i][j] - matrix2[i][j]
+
+print("Result of subtraction of matrix1 and matrix 2 is:")
+for i in range(row):
+    for j in range(col):
+         print(format(result[i][j] , "<3"), end = "")
+    print()
+_______________________________________________________________________________________________________
+*********Output********************
+
+Enter the row number:2
+Enter the column number:2
+Enter the elements for matrix 1:
+6
+7
+8
+9
+Matrix 1 is:
+6  7  
+8  9  
+Enter the elements for matrix 2:
+1
+2
+3
+4
+Matrix 2 is:
+1  2  
+3  4  
+Result of subtraction of matrix1 and matrix 2 is:
+5  5  
+5  5  
