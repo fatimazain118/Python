@@ -1,0 +1,12 @@
+#part2.2
+#Write a NumPy program to create an array of all the even integers from 10 to 50
+
+import numpy as np
+array = np.arange(10,71,2)  #2 is for skip i.e gap of 2 between no.
+print("NumPy program to create an array of all the even integers from 10 to 50 ")
+print(array)
+_________________________________________________________________________________________
+************Output**************
+NumPy program to create an array of all the even integers from 10 to 50 
+[10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56
+ 58 60 62 64 66 68 70]
