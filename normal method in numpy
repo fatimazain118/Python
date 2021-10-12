@@ -1,0 +1,11 @@
+#part2.3
+#Write a NumPy program to generate a random number between 0 and 1
+
+import numpy as np
+array = np.random.normal(0,1,1)
+print("NumPy program to generate a random number between 0 and 1 ")
+print(array)
+__________________________________________________________________________
+**********Output**********
+NumPy program to generate a random number between 0 and 1 
+[0.17074009]
