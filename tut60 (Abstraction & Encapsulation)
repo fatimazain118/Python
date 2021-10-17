@@ -1,0 +1,14 @@
+What is Abstraction?
+Abstraction refers to hiding unnecessary details to focus on the whole product instead of parts of the project separately. It is a mechanism that represents the important
+features without including implementation details.
+
+ In programming, abstraction can not be achieved without Encapsulation.
+
+What is Encapsulation?
+Encapsulation means hiding under layers. When working with classes and handling sensitive data, global access to all the variables used in the program is not secure. 
+In Encapsulation, the internal representation of an object is generally hidden from the outside to secure the data. It improves the maintainability of an application and helps
+the developers to organize the code better.
+
+Abstraction focuses on what the object does instead of how the details are implemented.
+Encapsulation focuses on hiding the code and data into a single unit to secure the data from the outside world.
+
