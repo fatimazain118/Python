@@ -1,0 +1,31 @@
+ there are two types of methods, i.e., static and class. 
+ It is one of the important concepts to use while you are learning OOPs programming with Python. A static method is very much easy to understand if we are familiar with class 
+ methods. It is also easier to implement than a class method because it can be accessed without any object. However, we can also access it using a class or any instance.
+ 
+ To define a static method, we use the @staticmethod decorator, which is a built-in decorator.
+ They are only formed in a class so that only the class instances can access them. we do not have to pass self or cls as a parameter, so the program's efficiency increases.
+ 
+ ye isliye use krte ki koi khud se self/cls argument na le bss apna ek kaam krre aur class k andr isliye hai ki hm clss k objects ko bss access krwana chahte
+ 
+
+
+class Employee:
+    def __init__(self,_name, _salary, _role):
+        self.name = _name
+        self.salary = _salary
+        self.role = _role
+    
+    @staticmethod
+    def printGood(string):
+        print(f"This is {string}")
+        #return 89  None ki jagah ye print hojaiga 89
+harry = Employee("Harry", 455, "Student")
+
+Employee.printGood("harry")   #access though class
+# print(harry.printGood("Rohan"))  #sath me None isliye print hora qki printGood ki return value kch nhi hai
+
+harry.printGood("rohan")
+__________________________________________________________________________________________________
+**************Output*****************
+This is harry
+This is rohan
