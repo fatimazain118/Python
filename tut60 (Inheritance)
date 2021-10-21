@@ -1,0 +1,34 @@
+#“Inheritance is the ability to define a new class(child class) that is a modified version of an existing class(parent class)”
+
+class Employee:
+    def __init__(self,_name,_salary, _role):
+        self.name = _name
+        self.salary = _salary
+        self.role = _role
+
+    def printdetails(self):
+        return f"The Name is {self.name} his salary is {self.salary} and role is {self.role} "
+
+class Programmer(Employee):
+    def __init__(self,aname, asalary, arole, language):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+        self.languages = language
+
+    def printprog(self):
+        return f"The Programmer's name is {self.name} his salary is {self.salary},role he played is {self.role} and languages he nows are {self.languages}"
+
+harry = Employee("Harry",2500,"Coach")
+rohan= Employee("rohan",3000,"Student")
+
+zainab = Programmer("Zainab", 3000, "Programmer","C++")
+fatima= Programmer("Fatime",4000,"Programmer","python")
+
+print(harry.printdetails())   #by base class
+print(zainab.printprog())     # by child class
+_________________________________________________________________________________________________________________________________________________________________________
+********************Output************************
+
+The Name is Harry his salary is 2500 and role is Coach 
+The Programmer's name is Zainab his salary is 3000,role he played is Programmer and languages he nows are C++
