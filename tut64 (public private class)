@@ -1,0 +1,20 @@
+private, protected, and public keywords are used to control the access of class members or variables.
+ Python uses a convention of prefixing the name of the variable or method with a single underscore(_) or double underscore(__) to emulate the behavior of protected and private access specifiers.
+ 
+ . Public members are generally methods declared in a class that is accessible from outside the class
+ 
+ Name mangling in Python:
+Python does not have any strict rules when it comes to public, protected, or private, like java. So, to protect us from using the private attribute in any other class, Python does name mangling, which means that every member with a double underscore will be changed to _object._class__variable when trying to call using an object. The purpose of this is to warn a user so he does not use any private class variable or function by mistake without realizing its states.
+
+
+class Employee:
+    _var =9          #protected
+    __pri =8         #private
+
+zainab = Employee()
+print(zainab._var)
+print(zainab._Employee__pri)
+________________________________________________
+**********output************
+9
+8
