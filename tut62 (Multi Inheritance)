@@ -1,0 +1,91 @@
+class Employee:
+    var=4
+    def __init__(self,_name,_salary, _role):
+        self.name= _name
+        self.salary= _salary
+        self.role= _role
+
+    def printdetails(self):
+        return f"The name of employee is {self.name}, his salary is {self.salary} and the his role is {self.role}"
+
+harry = Employee("Harry", 5000, "Coach")
+
+class Player:
+    var=5
+    def __init__(self,aname, agame):
+        self.name= aname
+        self.game = agame
+
+    def printdetails(self):
+        return f"The name of employee is {self.name}, his salary is {self.salary} and and he plays {self.game}"
+
+zainab = Player("Zainab",["Tennis"])
+
+class CoolProgrammer(Employee, Player):
+    var=10
+    pass          #agar is k andr kch nhi likha tb pass likhdo indentation error nhi aaiga
+    language = "C++"
+    def printme(self):
+        print(self.language)
+
+
+karan = CoolProgrammer("Karan",50000,"Master")
+print(karan.printdetails())
+karan.printme()
+_________________________________________________________________________________________________________________________________
+***************Output*****************
+The name of employee is Karan, his salary is 50000 and the his role is Master
+C++
+_____________________________________________________________________________________________________
+ We should always give attention to the ordering of the base classes because it helps us a lot when multiple classes contain the same methods and also in method overriding. 
+ 
+ Method Overriding:
+Override means having two methods that have the same name. They may perform same tasks or different tasks. In python, when the same method defined in the parent class is 
+also defined in the child class, the process is known as Method overriding.
+
+There are few rules for Method overriding that should be followed:
+
+1-The name of the child method should be the same as parents.
+2-Inheritance should be there, and we need to derive a child class from a parent class
+3-Both of their parameters should be the same. 
+
+class Employee:
+    var=4
+    def __init__(self,_name,_salary, _role):
+        self.name= _name
+        self.salary= _salary
+        self.role= _role
+
+    def printdetails(self):
+        return f"The name of employee is {self.name}, his salary is {self.salary} and the his role is {self.role}"
+
+harry = Employee("Harry", 5000, "Coach")
+
+class Player:
+    var=5
+    def __init__(self,aname, agame):
+        self.name= aname
+        self.game = agame
+
+    def printdetails(self):
+        return f"The name of employee is {self.name}, his salary is {self.salary} and and he plays {self.game}"
+
+zainab = Player("Zainab",["Tennis"])
+
+class CoolProgrammer(Employee, Player):      #order matter
+    # var=10
+    pass                             #agar is k andr kch nhi likha tb pass likhdo indentation error nhi aaiga
+    language = "C++"
+    def printme(self):
+        print(self.language)
+
+
+karan = CoolProgrammer("Karan",50000,"Master")      #Employee pehle likha hai isliye ussi k constructor k parameters likhe hai
+# print(karan.printdetails())
+# karan.printme()
+print(karan.var)           #agar apni class me variable nhi hai to pehli wali class ka print krega
+______________________________________________________________________________________________________________________
+****************Output**************
+4
+
+
