@@ -1,0 +1,27 @@
+class Dad:
+    basketball =4
+
+class Son(Dad):
+    basketball =4
+    dance=3
+    def isdance(self):
+        return f"Yes I can dance, and get score {self.dance}"
+
+class Grandson(Son):
+    dance =8
+    def isdance(self):         #method overriding
+        return f"Yeahh..!" \
+               f" I can dance nicely, and get score {self.dance}"
+
+darry =Dad()
+larry = Son()   #larry is the instance of Son class
+harry = Grandson()
+
+print(harry.dance)
+print(harry.basketball)   #search in Son then in Dad
+print(harry.isdance())
+__________________________________________________________________________
+*************Output********************
+8
+4
+Yeahh..! I can dance nicely, and get score 8
