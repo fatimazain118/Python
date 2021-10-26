@@ -1,0 +1,33 @@
+method names with a double underscore (__), such as the __init__ method that every class has. These methods are called “dunder” methods. In Python, Dunder methods are used for operator overloading and customizing some other function’s behavior.
+
+ the + sign. For numbers, it is used for addition between them, but in the case of a string, it is used to join or combine two strings, working differently in two different scenarios. The operators are methods defined in respective classes. Defining methods for operators is known as operator overloading.
+ 
+ 
+ class Employee:
+    def __init__(self,_name, _salary , _role):
+        self.name = _name
+        self.salary = _salary
+        self.role = _role
+    # @classmethod
+    def __add__(self, other):
+        return self.salary + other.salary
+
+    def __repr__(self):
+        return f"Employee('{self.name}', {self.salary},'{self.role}')"
+
+    def __str__(self):
+        return f"The Name is {self.name}, Salary is {self.salary} and role is {self.role}"
+
+harry = Employee("Harry", 456, "Programmer")
+rohan = Employee("Rohan", 50,"Clearner")
+print(harry + rohan)       #adding two objects using Dunder Methods,these help in operator overloading
+print(harry)          #to make it readable we use __repr__ method
+print(rohan) #pehle __str__ wala run hota hai
+print(repr(harry))     #jab tk aisi ni bulaingye
+
+____________________________________________________________________________________________________________
+************Output****************
+506
+The Name is Harry, Salary is 456 and role is Programmer
+The Name is Rohan, Salary is 50 and role is Clearner
+Employee('Harry', 456,'Programmer')
