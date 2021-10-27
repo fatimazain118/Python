@@ -1,0 +1,110 @@
+Decorators are functions that take another function as an argument, and their purpose is to modify the other function without changing it.
+A property decorator is used for setting the parameters. In OOP, the setter is an important part of the program as we can easily get the values passed in parameters.
+Without a setter, it is impossible to update the values passed as parameters during object creation. Setters are usually used in Oop to set the value of private attributes
+in a class. 
+
+@property
+ #def getter method
+
+Setters are a great way of performing encapsulation 
+@function_name.setter
+#def function
+
+Deleter is used to delete the values passed as a parameter before. We can use a setter if we want to update or change the value, but we can not use it to delete the value.
+This is where deleter comes in; it removes the previous value and sets the variable equal to none. As in OOP, we do not completely erase the existence of some variable but 
+sets it equal to none.
+
+ # Deleter method 
+@function_name.deleter
+
+ Property decorator(@property) is a pythonic way of defining getters, setters, and deleters. Properties defined with the @property syntax is more compact and readable. 
+ When we define the properties, we can change the class’s internal implementation without changing the program.
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class Employee:
+    def __init__(self, fname, lname):
+        self.fname= fname
+        self.lname = lname
+        # self.email = f"{fname}.{lname}@codewithharry.com" # #this will not change the email
+
+
+    def explain(self):
+        return f"This employee name is {self.fname} {self.lname}"
+
+    @property
+    def email(self):
+        return f"{self.fname}.{self.lname}@codewithharry.com"   # pehle bss pass likha tha yha
+
+    @email.setter
+    def email(self,string):
+        print("Setting now..")
+        names = string.split("@")[0]
+        self.fname = names.split(".")[0]
+        self.lname = names.split(".")[1]
+
+
+zainab = Employee("Zainab","Fatima")
+harry = Employee("Harry", "Harrish")
+print(zainab.email)
+print(zainab.explain())
+print(harry.fname)
+
+zainab.fname ="Zain"
+print(zainab.email)
+print(zainab.email)  #agr ye bina function bnai call krna hai to property use krenggye
+zainab.email = "this.that @codewithharry.com"
+print(zainab.email)
+_________________________________________________________________________________________________
+**********Output************
+Zainab.Fatima@codewithharry.com
+This employee name is Zainab Fatima
+Harry
+Zain.Fatima@codewithharry.com
+Zain.Fatima@codewithharry.com
+Setting now..
+this.that @codewithharry.com
+________________________________________________________________________________
+class Employee:
+    def __init__(self, fname, lname):
+        self.fname= fname
+        self.lname = lname
+        # self.email = f"{fname}.{lname}@codewithharry.com" # #this will not change the email
+
+    def explain(self):
+        return f"This employee name is {self.fname} {self.lname}"
+
+    @property
+    def email(self):
+        if self.fname == None or self.lname == None:
+            return "Email is not set please set it using setters"
+        return f"{self.fname}.{self.lname}@codewithharry.com"   # pehle bss pass likha tha yha
+
+    @email.setter
+    def email(self,string):
+        print("Setting now..")
+        names = string.split("@")[0]
+        self.fname = names.split(".")[0]
+        self.lname = names.split(".")[1]
+
+    @email.deleter
+    def email(self):
+        self.fname =None
+        self.lname = None
+
+zainab = Employee("Zainab","Fatima")
+harry = Employee("Harry", "Harrish")
+
+zainab.fname ="Zain"
+print(zainab.email)  #agr ye bina function bnai call krna hai to property use krenggye
+zainab.email = "this.that @codewithharry.com"
+print(zainab.email)
+
+del zainab.email
+print(zainab.email)
+__________________________________________________________________________________________________
+**************Output****************
+Zain.Fatima@codewithharry.com
+Setting now..
+this.that @codewithharry.com
+Email is not set please set it using setters
