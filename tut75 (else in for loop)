@@ -1,0 +1,28 @@
+As we know that Python is more flexible in every aspect than the other ones, so in Python, we can use else without an if. Python allows us to implement the else functionality 
+with for loops.
+When we use else with for loop, the compiler will only go into the else block of code when two conditions are satisfied:
+
+1)The loop is normally executed without any error.
+2)We are trying to find an item that is not present inside the list or data structure on which we are implementing our loop.
+
+Except for these conditions, the program will ignore the else part of the program. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+khana = ["roti", "sabzi", "chawal"]
+
+for item in khana:
+    print(item)
+    break  #ye lga dia to else nhi chalega
+else:
+    print("This for loop ended properly")
+__________________________________________________
+*********Output**********
+roti
+_____________________________________________________
+for item in khana:
+    if item =="rolls":
+      break  #pura if check hoga nhi milla to if will be false then else will be printed
+else:
+    print("Item not found")
+______________________________________________________________________________________
+**************Output*******************
+Item not found
