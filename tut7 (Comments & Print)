@@ -2,7 +2,7 @@ print("This is tut 7", end =",") #As in python new line is added by default so p
 print("From Code with Harry")
 print("new line")
 print("This is tut7" , "From CodeWithHarry") #This ,(comma) helps to give space between two statements
-print("C:\nZainab") #To use \n as a string we have to put \\
+print("C:\nZainab") #To use \n as a string we have to put \\ else it'll consider it as a new line character
 print("C:\\nZainab")
 print("Zainab \t Fatima") #\t gives tab to our string and \n these are Escape Sequence Character
 #This is single line comment
@@ -20,5 +20,5 @@ new line
 This is tut7 From CodeWithHarry
 C:
 Zainab
-C:\nZainab
+C:\nZainab  //from 6th line
 Zainab 	 Fatima
