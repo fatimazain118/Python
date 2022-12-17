@@ -1,4 +1,6 @@
-#The string is a data type in Python. Strings in Python programming language are arrays of bytes representing a sequence of characters. In simple terms, Strings are the combination or collection of characters enclosed in quotes. Strings are one of the most used data types in any programming language because most of the real-world data such as name, address, or any sequence which contains alphanumeric characters are mostly of type ‘String’.
+#The string is a data type in Python. Strings in Python programming language are arrays of bytes representing a sequence of characters. In simple terms, Strings are 
+the combination or collection of characters enclosed in quotes. Strings are one of the most used data types in any programming language because most of the real-world 
+data such as name, address, or any sequence which contains alphanumeric characters are mostly of type ‘String’.
 
 '''Primarily, you will find three types of strings in Python :
 
@@ -7,7 +9,8 @@ Double Quote String – (“Double Quote String”)
 Triple Quote String – (‘’’ Triple Quote String ‘’’)
 '''
 #In Python, the term ‘string slice’ refers to a part of the string, where strings are sliced using a range of indices.
-#To do string slicing, we just need to put the name of the string followed by [n:m]. It means ‘n’ denotes the index from which slicing should start, and ‘m’ denotes the index at which slicing should terminate or complete.
+#To do string slicing, we just need to put the name of the string followed by [n:m]. It means ‘n’ denotes the index from which slicing should start, and ‘m’ denotes 
+the index at which slicing should terminate or complete.
 
 
 
